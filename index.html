@@ -2,11 +2,18 @@
 <html>
     <head>
         <link href="styles/styles.css" rel="stylesheet">
+        <link href="styles/wrapper-error404.css" rel="stylesheet">
         <link href="styles/side-bar.css" rel="stylesheet">
         <link href="styles/font-faces.css" rel="stylesheet">
         <link href="styles/global-elements.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/c0fb46acaf.js" crossorigin="anonymous"></script>
 
+        <link rel="stylesheet" href="styles/styles2.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">    
+        <!--<script src="https://kit.fontawesome.com/9a030de552.js" crossorigin="anonymous"></script>
+        -->
         <title>Lemon</title>
     </head>
 
@@ -103,20 +110,56 @@
                 </div>
             </div>
 
-            <div id="error404" class="block">
-                <div class="block-header" id="head-404">
-                    <h1>404</h1>
-                    <hr>
+            <div id="wrapper-error404">
+                <div id="error404" class="block">
+                    <div class="block-header" id="head-404">
+                        <h1>404</h1>
+                        <hr>
+                    </div>
+
+                    <div id="content-404-wrapper">
+                        <div id="content-404">
+                            <div id="content-404-text">
+                                <h2>Sorry</h2>
+                                <p>WE COULDN'T FIND THE PAGE</p>
+                                <img src="images/sad-smile.png">
+                            </div>
+                            <button>BACK</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="content-404-wrapper">
-                    <div id="content-404">
-                        <div id="content-404-text">
-                            <h2>Sorry</h2>
-                            <p>WE COULDN'T FIND THE PAGE</p>
-                            <img src="images/sad-smile.png">
+                <div class="wrapper-author">
+                    <div class = "wrapper-author-content">
+                        <span class="author-text">Author</span>
+                        <div class="wrapper-author-content-line"></div>
+                        <div class="author-information">
+                            <img  class="author-image" src="images/womanFace.jpg" alt="woman">
+                            <div class="author-living">
+                                <span class="name">Karen Gray</span>
+                                <span class="country">United States</span>
+                                <ul>
+                                    <li><a href="https://google.com" target="_blanck"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                                    <li><a href="https://twitter.com" target="_blanck"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="https://facebook.com" target="_blanck"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.pinterest.com/" target="_blanck"><i class="fa-brands fa-pinterest"></i></a></li>
+                                </ul>
+                                
+                                <div class="author-information-line"></div>
+                                <span class="article-name">About Lemon</span>
+                                <span class="article-text">Over the fifteen-year life span of Food.com, 
+                                    we’ve learned that – in addition to eating – 
+                                    sharing is what you do best. And thanks to the 
+                                    20 million of you who come here each month, we 
+                                    now have 500,000 recipes to show for it, more 
+                                    than anywhere else in the digital universe. We 
+                                    also have tons crazy-tempting photos, troves of 
+                                    recipe reviews and more than 2 million Facebook likes.
+                                     That’s a heck of a lot of Food. Thank you!</span>
+                                <img class="article-signature" src="images/womanSignature.jpg" alt="signature">
+                            </div>
                         </div>
-                        <button>BACK</button>
+                        
                     </div>
                 </div>
             </div>
