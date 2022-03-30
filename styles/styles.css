@@ -249,3 +249,25 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+#wrapper-side-bar {
+    display: flex;
+    gap: 65px;
+    width: 1020px;
+    margin-left: 50px;
+    margin-top: 80px;
+}
+
+#wrapper-side-bar-left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+#wrapper-side-bar-center {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin-left: 30px;
+}
