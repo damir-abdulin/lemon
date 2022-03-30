@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    cursor: pointer;
+    color: red;
+}
+
+button {
+    cursor: pointer;
+
+    font-size: 12px;
+    text-align: center;
+
+    width: 105px;
+    height: 30px;
+
+    border-radius: 0;
+    border-width: 1px;
+
+    background-color: #f8f8f8;
+
+    padding: 0;
+
+    /* box-shadow: none; */
+}
+button:hover {
+    background-color: #383737;
+    color: white;
+}
+
+hr {
+    height: 2px;
+    border: none;
+    background-color: #dddddd;
+
+    margin: 0;
+}
+
+.wrapper {
+    background-color: #eaeaea;
+    padding-left: 150px;
+
+}
+
+.block {
+    background-color: white;
+    width: 1120px;
+    box-shadow: 0.4em 0.4em 10px rgba(122,122,122,0.1);
+}
