@@ -7,31 +7,11 @@ a {
     color: black;
 }
 a:hover {
+    font-weight: 700;
+    opacity: 1;
+    font-style: bold;
+    text-decoration: underline;
     cursor: pointer;
-    color: red;
-}
-
-button {
-    cursor: pointer;
-
-    font-size: 12px;
-    text-align: center;
-
-    width: 105px;
-    height: 30px;
-
-    border-radius: 0;
-    border-width: 1px;
-
-    background-color: #f8f8f8;
-
-    padding: 0;
-
-    /* box-shadow: none; */
-}
-button:hover {
-    background-color: #383737;
-    color: white;
 }
 
 hr {
@@ -45,7 +25,6 @@ hr {
 .wrapper {
     background-color: #eaeaea;
     padding-left: 150px;
-
 }
 
 .block {

@@ -143,6 +143,30 @@
 .radio-button:hover {
     cursor: pointer;
 }
+.button-damir {
+    cursor: pointer;
+
+    font-family: 'Josefin Light';
+    font-size: 12px;
+    text-align: center;
+
+    width: 105px;
+    height: 30px;
+
+    border-radius: 0;
+    border-width: 1px;
+
+    background-color: #f8f8f8;
+
+    padding: 0;
+
+    /* box-shadow: none; */
+}
+.button-damir:hover {
+    background-color: #383737;
+    color: white;
+}
+
 
 /*------------- RECIPES -------------*/
 #recipes {
@@ -250,24 +274,81 @@
     padding-right: 10px;
 }
 
-#wrapper-side-bar {
+/*------------- ERROR 404 -------------*/
+#error404 {
     display: flex;
-    gap: 65px;
-    width: 1020px;
-    margin-left: 50px;
-    margin-top: 80px;
-}
 
-#wrapper-side-bar-left {
-    display: flex;
+    justify-content: center;
     flex-direction: column;
-    gap: 50px;
-    margin-bottom: 50px;
-}
+    align-items: center;
 
-#wrapper-side-bar-center {
+
+    height: 520px;
+    width: 520px;
+
+    background: url("../images/error404.png");
+}
+#head-404 {
+    width: 440px;
+}
+#head-404 h1 {
+    text-decoration: none;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+#head-404 hr {
+    width: 440px;
+}
+#content-404-wrapper {
     display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 470px;
+}
+#content-404 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
-    gap: 45px;
-    margin-left: 30px;
+
+    height: 255px;
+    width: 130px;
+    
+    padding-top: 80px;
+
+    text-align: center;
+}
+#content-404-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 120px;
+}
+#content-404-text img {
+    width: 25px;
+    height: 30px;
+}
+#content-404 h2 {
+    font-family: "Josefin Bold";
+    font-size: 34px;
+
+    margin: 0;
+    /* margin-top: 20px; */
+}
+#content-404 p {
+    font-family: "Playfair Black";
+    font-size: 16px;
+    color: #a9a9a9;
+
+    margin: 0;
 }
