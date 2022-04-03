@@ -616,6 +616,29 @@ body {
     grid-column: 3;
 }
 
+
+#btn-recipe{
+    font-size: 10px; 
+    margin-top: 10px;
+}
+
+#bl9-icons{
+    margin-left:0px;
+    margin-top: 15px; 
+    width: 130px;
+}
+
+#vl-2{
+    height: 100px; 
+    border-color: #0d5959;
+}
+
+#vl-3{
+    height: 130px; 
+    border-color: #b50051;
+}
+
+
 #tags {
     display: flex;
     flex-direction: column;
