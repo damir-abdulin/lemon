@@ -290,10 +290,11 @@
 }
 #head-404 {
     width: 440px;
+    border-bottom: #dddddd solid 2px;
 }
 #head-404 .text-title {
     display: block;
-    
+
     text-decoration: none;
 
     font-family: 'Josefin Sans', sans-serif;
