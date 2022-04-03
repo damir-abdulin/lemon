@@ -88,7 +88,7 @@
     width: 250px;
     height: 105px;
 }
-#hero-page h1{
+#hero-page .text-title{
     font-family: "Playfair Regular";  
     font-size: 24px;
     font-weight: 400;
@@ -246,7 +246,7 @@
 
     margin: 0;
 }
-#div-recipe-content h1 {
+#div-recipe-content .text-title {
     font-family: "Playfair Black";
     font-size: 32px;
     color: #055555;
@@ -291,7 +291,9 @@
 #head-404 {
     width: 440px;
 }
-#head-404 h1 {
+#head-404 .text-title {
+    display: block;
+    
     text-decoration: none;
 
     font-family: 'Josefin Sans', sans-serif;

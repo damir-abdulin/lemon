@@ -638,9 +638,12 @@ body {
     width: 250px;
 }
 
-#tags-header h1 {
+#tags-header .text-title {
+    display: block;
+
     font-family: "Josefin ThinItalic";
     font-size: 20px;
+    font-weight: bold;
 
     margin: 0;
     margin-top: 20px;
@@ -705,9 +708,12 @@ body {
     width: 250px;
 }
 
-#calendar-header h1 {
+#calendar-header .text-title {
+    display: block;
+    
     font-family: "Josefin ThinItalic";
     font-size: 20px;
+    font-weight: bold;
 
     margin: 0;
     margin-top: 20px;
