@@ -226,6 +226,9 @@
 
     margin-right: 20px;
 }
+#div-recipe-icon a {
+    color:white;
+}
 #div-recipe-content {
     display: flex;
     justify-content: space-between;

@@ -14,14 +14,6 @@ a:hover {
     cursor: pointer;
 }
 
-hr {
-    height: 2px;
-    border: none;
-    background-color: #dddddd;
-
-    margin: 0;
-}
-
 .wrapper {
     background-color: #eaeaea;
     padding-left: 150px;
