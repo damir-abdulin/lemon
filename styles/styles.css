@@ -74,7 +74,7 @@
     height: 440px;
     background: url("../images/big-recipe.png");
 }
-#hero-page-content {
+#hero-page-slider {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -83,6 +83,11 @@
     height: 335px;
 
     margin-left: 95px;
+}
+.hero-page-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 #hero-page img {
     width: 250px;
