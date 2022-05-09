@@ -1,14 +1,9 @@
-
-/*------------- HERO PAGE -------------*/
 #slider {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
     margin-top: 85px;
     height: 440px;
 }
-/* #slider-slider {
+
+.slider-block-content {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -17,7 +12,8 @@
     height: 335px;
 
     margin-left: 95px;
-} */
+}
+
 #slider-block-1,
 #slider-block-2,
 #slider-block-3,
@@ -28,17 +24,17 @@
 }
 
 .slider-block {
-    display: flex;
+    align-items: center;
     justify-content: space-between;
-    flex-direction: column;
 
-    animation: slider 2s forwards;
+    width: 100%;
+    height: 100%;
 }
-#slider img {
+.slider-block img {
     width: 250px;
     height: 105px;
 }
-#slider .text-title{
+.slider-block .text-title{
     font-family: "Playfair Regular";  
     font-size: 24px;
     font-weight: 400;
@@ -50,7 +46,7 @@
     margin: 0;
     margin-top: 15px;
 }
-#slider p {
+.slider-block p {
     font-family: "Josefin Light";
     line-height: 1.2;
     font-size: 16px;
@@ -58,7 +54,7 @@
     width: 340px;
     height: 90px;
 }
-#radio-buttons-wrapper {
+.radio-buttons-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -116,3 +112,28 @@
     background-color: #383737;
     color: white;
 }
+
+.slider-block {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+   
