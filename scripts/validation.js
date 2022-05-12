@@ -1,34 +1,48 @@
 const formSignUp = document.getElementById('sign-up');
 const fieldsSignUp = document.getElementsByClassName('field-sign-up');
+const buttonSignUp = document.getElementById('sign-up-button');
 
 const passwordSignUp = document.getElementById('sign-up-password');
 const repasswordSignUp = document.getElementById('sign-up-repassword');
 const emailSignUp = document.getElementById('sign-up-email');
 const usernameSignUp = document.getElementById('sign-up-username');
 
+const passwordSignUpState = false
+const repasswordSignUpState = false;
+const emailSignUpState = false;
+const usernameSignUpState = false;
+
 const formSignIn = document.getElementById('sign-in');
 const fieldsSignIn = document.getElementsByClassName('field-sign-in');
+const buttonSignIn = document.getElementById('sign-in-button');
 
 const usernameSignIn = document.getElementById('sign-in-username');
 const passwordSignIn = document.getElementById('sign-in-password');
 
+const usernameSignInState = false;
+const passwordSignInState = false
+
+
+document.getElementById("sign-up-button").disabled = true;
+
 emailSignUp.addEventListener('input', function(e) {
-    checkEmailSignUp();
+    emailSignUpState = checkEmailSignUp();
+    changeButtonSignUpState();
 });
 usernameSignUp.addEventListener('input', function(e) {
     checkSimpleField(formSignUp, usernameSignUp, 'error-username-sign-up');
+    changeButtonSignUpState();
 });
 passwordSignUp.addEventListener('input', function(e) {
     checkSimpleField(formSignUp, passwordSignUp, 'error-password-sign-up');
     checkRepasswordSignUp();
+    changeButtonSignUpState();
 });
 repasswordSignUp.addEventListener('input', function(e) {
     checkRepasswordSignUp();
+    changeButtonSignUpState();
 });
 formSignUp.addEventListener('submit', function (e) {
-    // let result = checkEmailSignUp() && checkSimpleField(usernameSignUp, 'error-username-sign-up') 
-    // checkSimpleField(passwordSignUp, 'error-password-sign-up') && checkRepasswordSignUp();
-
     let email = checkEmailSignUp();
     let username = checkSimpleField(formSignUp, usernameSignUp, 'error-username-sign-up');
     let password = checkSimpleField(formSignUp, passwordSignUp, 'error-password-sign-up');
@@ -40,9 +54,11 @@ formSignUp.addEventListener('submit', function (e) {
 });
 usernameSignIn.addEventListener('input', function(e) {
     checkSimpleField(formSignIn, usernameSignIn, 'error-username-sign-in');
+    changeButtonSignInState();
 });
 passwordSignIn.addEventListener('input', function(e) {
     checkSimpleField(formSignIn, passwordSignIn, 'error-password-sign-in');
+    changeButtonSignInState();
 });
 formSignIn.addEventListener('submit', function (e) {
     
@@ -131,4 +147,11 @@ function checkRepasswordSignUp() {
     let isSamePassword = checkPasswordMatch(passwordSignUp, repasswordSignUp, 'error-repassword-sign-up');
 
     return isNotBlank && isSamePassword;
+}
+function changeButtonSignUpState() {
+    buttonSignUp.disabled = !(emailSignUpState || usernameSignUp || passwordSignUp || repasswordSignUp);
+}
+
+function changeButtonSignInState() {
+    buttonSignIn.disabled = usernameSignInState && passwordSignInState;
 }
