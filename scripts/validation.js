@@ -1,31 +1,22 @@
-const formSignUp  = document.getElementById('sign-up');
+const formSignUp = document.getElementById('sign-up');
+const buttonSignUp = document.getElementById('btsignup');
 const emailSignUp = document.getElementById('sign-up-email');
-const emailErrorSignUp = document.getElementById('sign-up-email-error');
+const usernameSignUp = document.getElementById('sign-up-username');
+const passwordSignUp = document.getElementById('sign-up-password');
+const repasswordSignUp = document.getElementById('sign-up-repassword');
+const fieldsSignUp = document.getElementsByClassName('field-sign-up');
 
-emailSignUp.addEventListener('input', function (event) {
-    if (emailSignUp.validity.valid) {
-        emailErrorSignUp.textContent = '';
-        emailErrorSignUp.className = 'sign-up-email-error'; 
-    } else {
-        showError();
-    } 
-});
+formSignUp.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-formSignUp.addEventListener('submit', function (event) {
-    if(!emailSignUp.validity.valid) {
-        showError();
-        event.preventDefault();
+    for (let i = 0; i < fieldsSignUp.length; i++) {
+        if (!fieldsSignUp[i].value) {
+            console.log('field is blank', fieldsSignUp[i])
+            var error = document.createElement('div')
+            error.className='error'
+            error.style.color = 'red'
+            error.innerHTML = 'Cannot be blank'
+            formSignUp[i].parentElement.insertBefore(error, fieldsSignUp[i])
+        }
     }
 });
-
-function showError() {
-    if(emailSignUp.validity.valueMissing) {
-    emailErrorSignUp.textContent = 'You need to enter an e-mail address.';
-    } else if(emailSignUp.validity.typeMismatch) {
-    emailError.textContent = 'Entered value needs to be an e-mail address.';
-    } else if(emailSignUp.validity.tooShort) {
-    emailErrorSignUp.textContent = `Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`;
-    }
-
-    emailErrorSignUp.className = 'sign-up-email-error active';
-}
