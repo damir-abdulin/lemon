@@ -817,12 +817,12 @@ body {
 }
 .block13 {
     width: 328px;
-    height: 406px;
+    min-height: 386px;
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
     padding-top: 20px;
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 20px;
+    margin-bottom: 129px;
 }
 .text13-1 {
     width: 145px;
@@ -846,7 +846,7 @@ body {
     border: 1px solid #c2c2c2;
     background-color: #ffffff;
 }
-.login, .usname, .password2, .rppassword {
+.login, .usname, .password2, .rppassword, .password {
     color: #000000;
     font-family: "Josefin Sans";
     font-size: 20px;
@@ -1054,12 +1054,11 @@ button:hover {
 }
 .block14 {
     width: 328px;
-    height: 535px;
+    min-height: 515px;
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
     padding-top: 20px;
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 20px;
 }
 .text14-1 {
     width: 145px;
