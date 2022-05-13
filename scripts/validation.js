@@ -22,8 +22,8 @@ const passwordSignIn = document.getElementById('sign-in-password');
 const usernameSignInState = false;
 const passwordSignInState = false
 
-
-document.getElementById("sign-up-button").disabled = true;
+buttonSignUp.disabled = true;
+buttonSignIn.disabled = true;
 
 emailSignUp.addEventListener('input', function(e) {
     emailSignUpState = checkEmailSignUp();
