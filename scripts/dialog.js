@@ -3,11 +3,11 @@ const showButton = document.getElementById('show');
 const savedButton = document.getElementById('saved');
 
 if (sessionStorage.getItem('showButton')) {
-    showButton.style.display = localStorage.getItem('showButton');
+    showButton.style.display = sessionStorage.getItem('showButton');
 }
 
 if (sessionStorage.getItem('savedButton')) {
-    savedButton.style.display = localStorage.getItem('savedButton');
+    savedButton.style.display = sessionStorage.getItem('savedButton');
 }
 
 
