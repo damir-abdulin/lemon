@@ -1,74 +1,49 @@
-const slides = document.getElementsByClassName("slider-block");
-const radioButtons = document.getElementsByClassName("radio-button");
+let slider = document.getElementById('slider');
+let radioButtons = document.getElementsByClassName('radio-button');
+let slides = document.getElementsByClassName('slider-block');
 
-let slideIndex = 0;
+let currentSlide = 0;
 
-// Устанавливает слайд, который был до обновления страницы.
-if (localStorage.getItem("slideIndex")) {
-    slideIndex = localStorage.getItem("slideIndex") - 1;
+start();
+
+if (localStorage.getItem("currentSlide")) {
+    currentSlide = localStorage.getItem("currentSlide");
 }
+setRadioButton();
+changePosition();
+
 for (let i = 0; i < radioButtons.length; i++) {
-    radioButtons[i].addEventListener('change', (event) => {
-        slideIndex = event.target.value;
-        setSlide();
-    });
+    radioButtons[i].addEventListener('change', chooseSlide);
 }
 
-showSlides();
+function start() {
+    window.setInterval(setNextSlide, 7000);
+}
 
-
-function showSlides() {
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
+function setNextSlide() {
+    if (currentSlide < slides.length - 1) {
+        currentSlide++;
+    } else {
+        currentSlide = 0;
     }
 
     setRadioButton();
-    setSlide();
+    changePosition();
+}
 
-    setTimeout(showSlides, 2000); // Change image every 7 seconds
-} 
+function changePosition() {
+    let position = -currentSlide * 1120 + 'px';
+    slider.style.left = position;
+    localStorage.setItem('currentSlide', currentSlide);
+}
+
 function setRadioButton() {
-    radioButtons[(slideIndex-1) * 6].checked = true;
-}
-function setSlide() {
-    clearSlider();
-
-    slides[slideIndex-1].style.display = "flex";
-    slides[slideIndex-1].style.marginLeft = "400px";
-
-    localStorage.setItem("slideIndex", slideIndex);
-} 
-function clearSlider() {
-    let i;
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        slides[i].style.marginLeft = "0";
-        slides[i].style.transition = "all 0.3s ease-out";
-    }
+    radioButtons[currentSlide].checked = true;
 }
 
-function drawSlide(timePassed) {
-    slides[slideIndex].style.left = timePassed / 5 + 'px';
-    slides[(slideIndex + 1) % slides.length].style.left = slides[slideIndex].style.left + slides[slideIndex].style.width;
-}
-function animate({draw, duration}) {
+function chooseSlide(e) {
+    currentSlide = e.target.value - 1;
 
-    let start = performance.now();
-
-    requestAnimationFrame(function animate(time) {
-        // timeFraction изменяется от 0 до 1
-        let timeFraction = (time - start) / duration;
-        if (timeFraction > 1) timeFraction = 1;
-
-        // вычисление текущего состояния анимации
-        let progress = timeFraction;
-
-        draw(progress); // отрисовать её
-
-        if (timeFraction < 1) {
-        requestAnimationFrame(animate);
-        }
-
-    });
+    setRadioButton();
+    changePosition();
 }

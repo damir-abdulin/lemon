@@ -948,6 +948,14 @@ button:hover {
     background-color: #c2c2c2;
     cursor: pointer;
 }
+.btsignup:disabled {
+    background-color: #ffffff;
+    cursor: unset;
+}
+.btlogin:disabled {
+    background-color: #ffffff;
+    cursor: unset;
+}
 
 .text13-4 {
     width: 150px;
