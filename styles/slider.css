@@ -1,0 +1,126 @@
+#hero-page {
+    display: flex;
+    position: relative;
+
+    margin-top: 85px;
+    height: 440px;
+
+}
+#hero-page-content {
+    width: 1120px;
+    overflow: hidden;
+}
+#slider {
+    position: relative;
+    width: 5600px;
+    transition: left .5s ease-in-out;
+}
+
+.slider-block-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 350px;
+    height: 335px;
+
+    margin-left: 95px;
+    margin-top: 56px;
+}
+
+#slider-block-1,
+#slider-block-2,
+#slider-block-3,
+#slider-block-4,
+#slider-block-5
+{
+    background: url("../images/big-recipe.png");
+}
+#slider-block-2 {
+    opacity: 1;
+}
+.slider-block {
+    float: left;
+    width: 1119px;
+    height: 438px;
+    white-space: normal;
+}
+.slider-block img {
+    width: 250px;
+    height: 105px;
+}
+.slider-block .text-title{
+    font-family: "Playfair Regular";  
+    font-size: 24px;
+    font-weight: 400;
+    color: #911026;
+
+    width: 355px;
+
+    letter-spacing: 0.5px;
+    margin: 0;
+    margin-top: 15px;
+}
+.slider-block p {
+    font-family: "Josefin Light";
+    line-height: 1.2;
+    font-size: 16px;
+
+    width: 340px;
+    height: 90px;
+}
+
+.radio-buttons-wrapper {
+    position: absolute;
+    margin-left: 90%;
+    margin-top: 34%;    
+}
+
+.radio-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+  
+    background-color: white;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+  
+    position: relative;
+    top: 4px;
+}
+.radio-button:checked {
+    background-color: #555555;
+}
+.radio-button:hover {
+    cursor: pointer;
+}
+
+.button-damir {
+    cursor: pointer;
+
+    font-family: 'Josefin Light';
+    font-size: 12px;
+    text-align: center;
+
+    width: 105px;
+    height: 30px;
+
+    border-radius: 0;
+    border-width: 1px;
+
+    background-color: #f8f8f8;
+
+    padding: 0;
+
+    /* box-shadow: none; */
+}
+.button-damir:hover {
+    background-color: #383737;
+    color: white;
+}

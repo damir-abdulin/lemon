@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- CSS -->
         <link href="styles/styles.css" rel="stylesheet">
         <link href="styles/font-faces.css" rel="stylesheet">
         <link href="styles/global-elements.css" rel="stylesheet">
-		<link href="styles2.css" rel="stylesheet">		
+        <link href="styles/slider.css" rel="stylesheet">
+		<link href="styles2.css" rel="stylesheet">	
+
+        <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
         <script src="https://kit.fontawesome.com/c0fb46acaf.js" crossorigin="anonymous"></script>
 
+
+        
         <title>Lemon</title>
     </head>
 
@@ -34,24 +40,82 @@
             </div>
 
             <div id="hero-page" class="block">
+
                 <div id="hero-page-content">
-                    <img src="images/big-logo.png">
-                    <span class="text-title">Bananas Foster Ice Cream Cake</span>
-                    <p>If you're looking for decadence, look no further — you've found
-                        the Holy Grail of desserts. Honestly, this cake makes us wonder 
-                        why Bananas Foster hasn't always been served on top of ice cream cake.
-                    </p>
-                    <button class="button-damir">GET IT RECIPE</button>
+                    <div id="slider">
+                        <div id="slider-block-1" class="slider-block">
+                            <div class="slider-block-content">
+                                <img src="images/big-logo.png">
+                                <span class="text-title">Recipe 1</span>
+                                <p>If you're looking for decadence, look no further — you've found
+                                    the Holy Grail of desserts. Honestly, this cake makes us wonder 
+                                    why Bananas Foster hasn't always been served on top of ice cream cake.
+                                </p>
+                                <button class="button-damir">GET IT RECIPE</button>
+                            </div>
+                            
+                        </div>
+                        
+                        <div id="slider-block-2" class="slider-block">
+                            <div class="slider-block-content">
+                                <img src="images/big-logo.png">
+                                <span class="text-title">Recipe 2</span>
+                                <p>If you're looking for decadence, look no further — you've found
+                                    the Holy Grail of desserts. Honestly, this cake makes us wonder 
+                                    why Bananas Foster hasn't always been served on top of ice cream cake.
+                                </p>
+                                <button class="button-damir">GET IT RECIPE</button>
+                            </div>
+                        </div>
+    
+                        <div id="slider-block-3" class="slider-block">
+                            <div class="slider-block-content">
+                                <img src="images/big-logo.png">
+                                <span class="text-title">Recipe 3</span>
+                                <p>If you're looking for decadence, look no further — you've found
+                                    the Holy Grail of desserts. Honestly, this cake makes us wonder 
+                                    why Bananas Foster hasn't always been served on top of ice cream cake.
+                                </p>
+                                <button class="button-damir">GET IT RECIPE</button>
+                            </div>
+                        </div>
+    
+                        <div id="slider-block-4" class="slider-block">
+                            <div class="slider-block-content">
+                                <img src="images/big-logo.png">
+                                <span class="text-title">Recipe 4</span>
+                                <p>If you're looking for decadence, look no further — you've found
+                                    the Holy Grail of desserts. Honestly, this cake makes us wonder 
+                                    why Bananas Foster hasn't always been served on top of ice cream cake.
+                                </p>
+                                <button class="button-damir">GET IT RECIPE</button>
+                            </div>
+                        </div>
+    
+                        <div id="slider-block-5" class="slider-block">
+                            <div class="slider-block-content">
+                                <img src="images/big-logo.png">
+                                <span class="text-title">Recipe 5</span>
+                                <p>If you're looking for decadence, look no further — you've found
+                                    the Holy Grail of desserts. Honestly, this cake makes us wonder 
+                                    why Bananas Foster hasn't always been served on top of ice cream cake.
+                                </p>
+                                <button class="button-damir">GET IT RECIPE</button>
+                            </div>
+                        </div>
+                    </div>
+    
                 </div>
-                <div id="radio-buttons-wrapper">
-                    <input class="radio-button" type="radio" name="recipe"> 
-                    <input class="radio-button" type="radio" name="recipe">
-                    <input class="radio-button" type="radio" name="recipe" checked>
-                    <input class="radio-button" type="radio" name="recipe">
-                    <input class="radio-button" type="radio" name="recipe">
+               
+                <div class="radio-buttons-wrapper">
+                    <input class="radio-button" type="radio" name="recipe" value=1> 
+                    <input class="radio-button" type="radio" name="recipe" value=2>
+                    <input class="radio-button" type="radio" name="recipe" value=3>
+                    <input class="radio-button" type="radio" name="recipe" value=4>
+                    <input class="radio-button" type="radio" name="recipe" value=5>
                 </div>
             </div>
-
+            
             <div id="recipes" class="block">
                 <div id="recipes-wrapper">
                     <div class="div-recipe-preview">
@@ -88,7 +152,14 @@
                     <span class="text-title">Bananas Foster Ice Cream Cake</span>
                     <div id="div-recipe-info">
                         <p><i class="far fa-clock fa-sm"></i> 15 mins   <i class="fas fa-signal fa-xl"></i> Easy</p>
-                        <button class="button-damir">SAVE RECIPE</button>
+                        
+                        <dialog>
+                            <p>The recipe has been saved</p>
+                            <button class="button-damir" id="close">CLOSE</button>
+                        </dialog>
+                        <button id="show" class="button-damir">SAVE RECIPE</button>
+                        <button id="saved" class="button-damir"><i class="fas fa-check"></i>SAVED</button>
+
                     </div>
 
                     <div id="div-ingredients">
@@ -446,16 +517,20 @@
                     <span class="text third">Login</span>
                     <div class="line three"></div>
                     <span class="text13-1">Login for LEMON</span>
-                    <div class="inputs">
-                        <input type="text" class="login" placeholder="email or login">
-                        <input type="text" class="password" placeholder="password">
-                    </div>
-                    <div class="flex1">
-                        <input type="checkbox" class="chbox">
-                        <span class="text13-2">Remember me</span>
-                        <a href="рпи" onclick="" class="a1"><span class="text13-4">Forgot your password?</span></a>
-                    </div>
-                    <button class="btlogin">login</button>
+                    
+                    <form id="sign-in">
+                        <div class="inputs">
+                            <input type="text" id="sign-in-username" class="login field-sign-in" placeholder="email or login">
+                            <input type="password" id="sign-in-password" class="password field-sign-in" placeholder="password">
+                        </div>
+                        <div class="flex1">
+                            <input type="checkbox" class="chbox">
+                            <span class="text13-2">Remember me</span>
+                            <a href="рпи" onclick="" class="a1"><span class="text13-4">Forgot your password?</span></a>
+                        </div>
+                        <button id="sign-in-button" class="btlogin">login</button>
+                    </form>                    
+
                     <div class="social">
                         <a href="https://facebook.com" target="_blank"><span class="facebook"><i class="fab fa-facebook-f"></i></span></a>
                         <a href="https://gmail.com" target="_blank" class="a2"><span class="g"><i class="fab fa-google-plus-g"></i></span></a>
@@ -466,13 +541,18 @@
                     <span class="text fourth">Sign in</span>
                     <div class="line three"></div>
                     <span class="text14-1">Sign in for LEMON</span>
-                    <div class="inputs">
-                        <input type="text" class="login" placeholder="email">
-                        <input type="text" class="usname" placeholder="user name">
-                        <input type="text" class="password2" placeholder="password">
-                        <input type="text" class="rppassword" placeholder="repeat password">
-                    </div>
-                    <button class="btsignup">sign up</button>
+
+                    <form id="sign-up" novalidate>         
+                        <div class="inputs">
+                            <input id="sign-up-email" type="email" class="login field-sign-up" placeholder="email">
+                            <input id="sign-up-username" type="text" class="usname field-sign-up" placeholder="user name">
+                            <input id="sign-up-password" type="password" class="password2 field-sign-up" placeholder="password">              
+                            <input id="sign-up-repassword" type="password" class="rppassword field-sign-up" placeholder="repeat password">
+                        </div>
+                        <button id="sign-up-button" class="btsignup">sign up</button>
+                    </form>
+
+
                     <div class="social l">
                         <a href="https://facebook.com" target="_blank"><span class="facebook2"><i class="fab fa-facebook-f"></i></span></a>
                         <a href="https://gmail.com" target="_blank" class="a3"><span class="g2"><i class="fab fa-google-plus-g"></i></span></a>
@@ -495,118 +575,26 @@
                     </div>
                 </div>
                 <div class="comment15">
-                    <img src="./images/Photo15_1.png" class="Photo15-1">
-                    <input type="text" class="Input15-1">
-                    <button class="btn15-4">POST</button>
+                    <img src="./images/anon.png" class="Photo15-1">
+                    <input type="text" class="Input15-1" onkeyup="preventEmpty()" id="textComment" value="">
+                    <button class="btn15-4" id="postComment" value="" disabled>POST</button>
                 </div>
             </div>
         
             <div class="block16">
-        
                 <div class="top-content16">
                     <span class="text16-1">Comments</span>
                     <div class="block16-1"></div>
                 </div>
-                <div class="other-content16">
-                    <img src="./images/Photo15_1.png" class="Photo16-1">
-                    <div class="sub-content1">
-                        <div class="top-row16">
-                            <div class="top-comment16">
-                                <span class="text16-2">post by</span>
-                                <div class="smuck-reply1">
-                                    <span class="text16-3">Smuckersreg Toppings</span>
-                                    <a href="#text16-4" class="reply16-1">reply</a>
-                                    <div class="top-likes16">
-                                        <span class="t456-1">456</span>
-                                        <span class="share16-1">
-                                        <i class="fa fa-share-alt"></i>
-                                    </span>
-                                        <span class="t15-1">15</span>
-                                        <span class="like16-">
-                                        <i class="fa-solid fa-thumbs-up"></i>
-                                    </span>
-                                    </div>
-                                </div>
-                                <span class="date16-1">6/10/2014</span>
-                            </div>
-                        </div>
-                        <div class="comment-img">
-                            <img src="./images/recipe1.png" class="Photo16-4">
-                            <div class="pintlink16  ">
-                                <a href="https://www.pinterest.com/" target="_blank"><span class="pinterest16"><i class="fa-brands fa-pinterest"></i></span></a>
-                            </div>
-                            <div class="ellipse16"></div>
-                            <span class="text16-5">Thanks for the recipe</span>
-                        </div>
-                        <div class="block16-2"></div>
-                        <div class="other-content16-2">
-                            <img src="./images/Photo15_1.png" class="Photo16-2">
-                            <div class="sub-content2">
-                                <div class="center-row16">
-                                    <div class="center-comment16">
-                                        <span class="text16-9">post by</span>
-                                        <div class="smuck-reply2">
-                                            <span class="text16-8">Smuckersreg Toppings</span>
-                                            <a href="#reply16-2" class="reply16-2">reply</a>
-                                            <div class="center-likes16">
-                                                <span class="t456-2">456</span>
-                                                <span class="share16-2">
-                                                    <i class="fa fa-share-alt"></i>
-                                                </span>
-                                                <span class="t15-2">15</span>
-                                                <span class="like16-2">
-                                                    <i class="fa-solid fa-thumbs-up"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <span class="date16-2">6/10/2014</span>
-                                        <span class="text16-11">Thanks for the recipe lorem ipsum bla bla bla Thanks for the recipe lore</span>
-                                    </div>
-                                    <span class="text16-12">24 more comments</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block16-3"></div>
-                <div class="bottom-content16">
-                    <img src="./images/Photo15_1.png" class="Photo16-2">
-                    <div class="sub-content2">
-                        <div class="center-row16">
-                            <div class="center-comment16">
-                                <span class="text16-9">post by</span>
-                                <div class="smuck-reply2">
-                                    <span class="text16-8">Smuckersreg Toppings</span>
-                                    <a href="#reply16-2" class="reply16-2">reply</a>
-                                    <div class="bottom-likes16">
-                                        <span class="t456-2">456</span>
-                                        <span class="share16-2">
-                                            <i class="fa fa-share-alt"></i>
-                                        </span>
-                                        <span class="t15-2">15</span>
-                                        <span class="like16-2">
-                                            <i class="fa-solid fa-thumbs-up"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <span class="date16-3">6/10/2014</span>
-                                <span class="text16-11">Thanks for the recipe</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block16-4"></div>
+                <div id="allComments"></div>
+
+                <script src="./makecomments.js"></script>
+                
             </div>
             <div class="block17">
                 <div class="navigation_bar">
-                    <a href="#text17-arrowleft" class="text17-arrowleft"><</a>
-                    <a href="#text17-1" class="text17-1">1</a>
-                    <a href="#text17-2" class="text17-2">2</a>
-                    <a href="#text17-3" class="text17-3">3</a>
-                    <a href="#text17-4" class="text17-4">4</a>
-                    <a href="#text17-5" class="text17-5">5</a>
-                    <a href="#text17-6" class="text17-6">6</a>
-                    <a href="#text17-arrowright" class="text17-arrowright">></a>
+                    <div id="pageBar" class="navigation_bar" >
+                    </div>
                 </div>
             </div>
             <div class="footer">
@@ -634,5 +622,12 @@
                 </div>
             </div>
 		</div>	
+
+        <!-- JS -->
+        <script  src="scripts/slider.js"></script>
+        <script src="scripts/dialog.js"></script>
+        <script src="scripts/validation.js"></script>
+        <script src="scripts/classes.js"></script>
+        <script src="scripts/makecomments.js"></script>
     </body>
 </html>

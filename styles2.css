@@ -817,12 +817,12 @@ body {
 }
 .block13 {
     width: 328px;
-    height: 406px;
+    min-height: 386px;
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
     padding-top: 20px;
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 20px;
+    margin-bottom: 129px;
 }
 .text13-1 {
     width: 145px;
@@ -846,7 +846,7 @@ body {
     border: 1px solid #c2c2c2;
     background-color: #ffffff;
 }
-.login, .usname, .password2, .rppassword {
+.login, .usname, .password2, .rppassword, .password {
     color: #000000;
     font-family: "Josefin Sans";
     font-size: 20px;
@@ -947,6 +947,14 @@ body {
 button:hover {
     background-color: #c2c2c2;
     cursor: pointer;
+}
+.btsignup:disabled {
+    background-color: #ffffff;
+    cursor: unset;
+}
+.btlogin:disabled {
+    background-color: #ffffff;
+    cursor: unset;
 }
 
 .text13-4 {
@@ -1054,12 +1062,11 @@ button:hover {
 }
 .block14 {
     width: 328px;
-    height: 535px;
+    min-height: 515px;
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
     padding-top: 20px;
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 20px;
 }
 .text14-1 {
     width: 145px;
@@ -1230,6 +1237,7 @@ button:hover {
     width: 56px;
     height: 56px;
     margin-left: 20px;
+    border-radius: 100%;
 }
 .Input15-1{
     font-family: 'Josefin Sans', sans-serif;
@@ -1251,7 +1259,13 @@ button:hover {
     color: #ffffff;
     background-color: #383737;
 }
-.btn15-4:hover{
+
+.btn15-4:disabled{
+    background-color: #383737;
+    cursor:unset;
+}
+
+.btn15-4:hover:enabled{
     background-color: #c2c2c2;
     color:#000000;
     cursor: pointer;
@@ -1305,10 +1319,14 @@ button:hover {
 }
 .smuck-reply1, .smuck-reply2{
     align-items: center;
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
 }
 .Photo16-1, .Photo16-2{
     width: 56px;
     height: 56px;
+    border-radius: 100%;
 }
 .Photo16-4{
     width: 313px;
@@ -1347,6 +1365,9 @@ button:hover {
 }
 .text16-11{
     margin-top: 10px;
+    overflow: auto;
+    width: 700px;
+    white-space: nowrap;
 }
 .text16-12{
     opacity: 0.5;
@@ -1385,7 +1406,7 @@ button:hover {
     margin-left: 10px;
 }
 .top-likes16, .bottom-likes16{
-    margin-left: 375px;
+    
     gap:5px;
 }
 .center-likes16{

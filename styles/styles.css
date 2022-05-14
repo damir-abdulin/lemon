@@ -72,9 +72,8 @@
 
     margin-top: 85px;
     height: 440px;
-    background: url("../images/big-recipe.png");
 }
-#hero-page-content {
+#hero-page-slider {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -83,6 +82,28 @@
     height: 335px;
 
     margin-left: 95px;
+}
+#hero-page-info-1 {
+    background: url("../images/big-recipe.png");
+}
+#hero-page-info-2 {
+    background: url("../images/big-recipe.png");
+}
+#hero-page-info-3 {
+    background: url("../images/big-recipe.png");
+}
+#hero-page-info-4 {
+    background: url("../images/big-recipe.png");
+}
+#hero-page-info-5 {
+    background: url("../images/big-recipe.png");
+}
+.hero-page-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    animation: slider 2s forwards;
 }
 #hero-page img {
     width: 250px;
@@ -357,4 +378,16 @@
     color: #a9a9a9;
 
     margin: 0;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+dialog .button-damir {
+    width: 100%;
+}
+
+#saved {
+    display: none;
 }
